@@ -28,5 +28,14 @@ img:hover {
 }
 
 
+.or-question p {
+  padding: .5em;
+  clear:both;
+}
+
+.or-question div {
+  float:left;
+  padding-right: 2em;
+}
 
 

@@ -8,40 +8,40 @@
 </div>
 
 <div class="row">
-  <form class="user-response">
+  <form class="user-response" action="/results" method="post">
       <div><label for="name">Name:<input type="text" placeholder="Please, enter here" name="name"></label></div>
-      <div><label for="age">Age:<input type="text" placeholder="Please, enter here" name="age"></label></div>
+      <div><label for="age">Age:<input type="text" placeholder="Please, enter here" name="current_age"></label></div>
 
        <div>
         <label for="gender">What's your gender?</label>
-          <input type="radio" name="gender"><label>Male</label>
-          <input type="radio" name="gender"><label>Female</label>
+          <input type="radio" name="gender" value="male"><label>Male</label>
+          <input type="radio" name="gender" value="female"><label>Female</label>
       </div>
 
       <div class=""><label for="location">Location:<input type="text" value="Austin, TX" name="location"></label></div>
 
       <div>
         <label for="diet">Diet</label>
-          <input type="radio" name="diet"><label>Vegetarian</label>
-          <input type="radio" name="diet"><label>Vegan</label>
-          <input type="radio" name="diet"><label>Meat Only</label>
-          <input type="radio" name="diet"><label>Children</label>
+          <input type="radio" name="diet" value="vegetarian"><label>Vegetarian</label>
+          <input type="radio" name="diet" value="vegan"><label>Vegan</label>
+          <input type="radio" name="diet" value="both"><label>Meat and Veggies</label>
+          <input type="radio" name="diet" value="children"><label>Children</label>
       </div>
 
       <div>
-        <label for="outlook">What is your outlook like?</label>
-          <input type="radio" name="outlook"><label>Positive</label>
-          <input type="radio" name="outlook"><label>Neutral</label>
-          <input type="radio" name="outlook"><label>Negative</label>
-          <input type="radio" name="outlook"><label>Fuck Life</label>
+        <label for="outlook">What is your outlook on life?</label>
+          <input type="radio" name="outlook" value="positive"><label>Positive</label>
+          <input type="radio" name="outlook" value="neutral"><label>Neutral</label>
+          <input type="radio" name="outlook" value="negative"><label>Negative</label>
+          <input type="radio" name="outlook" value="fuck"><label>Fuck Life</label>
       </div>
 
       <div>
         <label for="sleep">How often do you sleep?</label>
-          <input type="radio" name="sleep"><label>10+ Hours</label>
-          <input type="radio" name="sleep"><label>6-10 Hours</label>
-          <input type="radio" name="sleep"><label>Less than 6 Hours</label>
-          <input type="radio" name="sleep"><label>I'll sleep when I'm dead</label>
+          <input type="radio" name="sleep" value="10+ hours"><label>10+ Hours</label>
+          <input type="radio" name="sleep" value="6-10 hours"><label>6-10 Hours</label>
+          <input type="radio" name="sleep" value="less than 6 hours"><label>Less than 6 Hours</label>
+          <input type="radio" name="sleep" value="never"><label>I'll sleep when I'm dead</label>
       </div>
 
     <div class="row">
@@ -89,6 +89,9 @@
       </div>
     </div>
     </div>
+
+    <input type="submit" class="button round" value="WHEN AM I GONNA DIE?" />
+
 
   </form>
 </div>

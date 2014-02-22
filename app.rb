@@ -29,10 +29,25 @@ get '/' do
   erb :index
 end
 
-post '/' do
+post '/results' do
+
+  @title = "Death Results"
   puts params
-  @names = params[:name]
+  @name = params[:name]
   @gender = params[:gender]
+  @current_age = params[:current_age]
+  @location = params[:location]
+  @diet = params[:diet]
+  @outlook = params[:outlook]
+  @sleep = params[:sleep]
+  @death_age = rand(25..90)
+
+  @result = Result.create(name: @name, gender: @gender, current_age: @current_age,
+    location: @location, diet: @diet, outlook: @outlook,
+    sleep: @sleep, death_age: @death_age)
+
+  @results = Result.order("created_at DESC")
+
   erb :results
 end
 

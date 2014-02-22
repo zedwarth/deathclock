@@ -1,5 +1,6 @@
-function drawVisualization() {
-	//	Create and populate the data table.
+google.load("visualization", "1", {packages:["corechart"]});
+google.setOnLoadCallback(drawChart);
+function drawChart() {
 	var data = google.visualization.arrayToDataTable([
 		['x', 'Male', 'Female',     'User '],
 		['0',   1,       1,           0.5],
@@ -122,11 +123,12 @@ function drawVisualization() {
 		['118',   1,       1,           0.5],
 		['119',   1,       1,           0.5],
 	]);
-	Create and draw the visualization.
-		new google.visualization.LineChart(document.getElementById('visualization')).
-		draw(data, {curveType: "function",
-			 width: 500, height: 400,
-			 vAxis: {maxValue: 10}}
-			);
-}
 
+	var options = {
+		title: "Death Chart"
+	};
+
+	var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
+	var chart = new google.visulaization.LineChart(document.getElementById('chart_div'));
+	chart.draw(data, options);
+};

@@ -10,6 +10,7 @@ An interactive death clock that graphs your life expectancy base on things that 
 * Laugh
 
 Made by S'nM.
-Seth [@zedwarth](https://twitter.com/Zedwarth)
-Neil [@mithipati](https://twitter.com/mithipati)
-Michael [@imMichaelYoung](https://twitter.com/imMichaelYoung)
+
+* Seth [@zedwarth](https://twitter.com/Zedwarth)
+* Neil [@mithipati](https://twitter.com/mithipati)
+* Michael [@imMichaelYoung](https://twitter.com/imMichaelYoung)

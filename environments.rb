@@ -1,6 +1,7 @@
 configure :development do
   set :database, 'sqlite:///dev.db'
   set :show_exceptions, true
+  load 'private/auth_credentials.rb'
 end
 
 configure :production do

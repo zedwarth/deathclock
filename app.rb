@@ -44,13 +44,26 @@ get '/results' do
 end
 
 get '/auth/:provider/callback' do
-  puts params
-  client.update("I'm gonna die!")
+  # response = JSON.pretty_generate(request.env['omniauth.auth'])
+  response = request.env['omniauth.auth']
+  puts response['credentials']['token']
+  $twitter_access_token = response['credentials']['token']
+  $twitter_access_token_secret = response['credentials']['secret']
+  puts $twitter_access_token
+  puts $twitter_access_token_secret
+  client_new = Twitter::REST::Client.new do |config|
+    config.consumer_key        = $twitter_consumer_key
+    config.consumer_secret     = $twitter_consumer_secret
+    config.access_token        = $twitter_access_token
+    config.access_token_secret = $twitter_access_token_secret
+  end
+  puts client_new
+  client_new.update("testing!")
+
   erb "<h1>#{params[:provider]}</h1>
        <pre>#{JSON.pretty_generate(request.env['omniauth.auth'])}</pre>"
 
   # client.update_with_media("I'm gonna die!", File.new("http://mitchysweb.wikispaces.com/file/view/cute-sad-kitten04.jpg/102015109/cute-sad-kitten04.jpg"))
-  client.update("I'm gonna die!")
 
 end
 

@@ -107,7 +107,9 @@ function drawChart() {
 	]);
 
 	var options = {
-		title: 'Death Chart'
+		title: 'Death Chart',
+		vAxis: {direction: -1},
+		animation: {duration: 4000}
 	};
 
 	var chart = new google.visualization.LineChart(document.getElementById('chart_div'));

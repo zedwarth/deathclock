@@ -10,6 +10,13 @@ get '/' do
   erb :index
 end
 
+post '/' do
+  puts params
+  @names = params[:name]
+  @gender = params[:gender]
+  erb :results
+end
+
 get '/results' do
   @results = Result.order("created_at DESC")
   @title = "Death Results"

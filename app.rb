@@ -1,7 +1,6 @@
 require 'sinatra'
 require 'sinatra/activerecord'
 require './environments'
-require 'shotgun'
 
 class Result < ActiveRecord::Base
 end

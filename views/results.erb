@@ -1,0 +1,21 @@
+<%= @title %>
+
+<ul>
+<% @results.each do |result| %>
+  <li>
+    <h4>
+      <%= result.name %>, you will die when you are: <%= result.death_age %>
+    </h4>
+    <p>
+      Gender: <%= result.gender %><br />
+      Current Age: <%= result.current_age %><br />
+      Location:  <%= result.location %><br />
+      Diet: <%= result.diet %><br />
+      Outlook: <%= result.outlook %><br />
+      Sleep: <%= result.sleep %><br />
+      Handed: <%= result.handed %><br />
+      Created At: <%= result.created_at %>
+    </p>
+  </li>
+<% end %>
+</ul>

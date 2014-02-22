@@ -9,6 +9,7 @@ group :development do
   gem 'sqlite3'
   gem 'tux'
   gem 'pry'
+  gem 'shotgun'
 end
 
 group :production do

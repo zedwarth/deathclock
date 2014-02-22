@@ -20,9 +20,8 @@
 <% end %>
 </ul>
 
-<script type="javascript">
+<script type="text/javascript">
 
-var gender = <%= @results.first.gender %>;
-var name = <%= @results.first.name %>;
+var results = <%= @results.to_json %>;
 
 </script>

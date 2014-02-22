@@ -86,6 +86,10 @@ get '/logout' do
   redirect '/'
 end
 
+get '/graph' do
+	erb :graph
+end
+
 helpers do
   def title
     if @title
@@ -95,4 +99,3 @@ helpers do
     end
   end
 end
-

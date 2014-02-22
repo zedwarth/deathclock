@@ -1,0 +1,32 @@
+body {
+  margin: 0;
+  background-image: url(http://www.psdgraphics.com/file/cloudy-sky-cartoon.jpg);
+  background-size: 100% auto;
+}
+
+.container {
+  text-align: center;
+  padding: 6em;
+}
+
+img {
+  transition: border 0.5s linear;
+}
+
+img:hover {
+  border: 1em solid black;
+}
+
+
+.welcome-message {
+  text-align: center;
+  margin-top: -.5em;
+  font-family: 'Acme', sans-serif;
+  font-size: 5em;
+  color: #274563;
+  letter-spacing: .1em;
+}
+
+
+
+

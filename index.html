@@ -1,27 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
     <link href='http://fonts.googleapis.com/css?family=Acme' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="foundation-5.1.1/css/foundation.css" />
+    <link rel="stylesheet" href="css/foundation-5.1.1/css/foundation.css" />
     <meta charset="UTF-8">
-    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Meet your Maker!</title>
   </head>
   <body>
+
+
+
+
+
+
       <div class="row">
-        <div class="container">
+        <div class="img-container">
             <a href="#"><img src="http://placehold.it/300x300"></a>
         </div>
         <p class="welcome-message">Click My Belly!</p>
       </div>
 
+
+
+
+
+
+
+
+
+
+
+
       <div class="row">
-        <form class="user-response">
+        <div class="form-container">
+        <form class="user-response" method="post" action="/response">
+              <!-- Describes all open and multiple choice questions -->
               <div><label for="name">Name:<input type="text" placeholder="Please, enter here" name="name"></label></div>
+
               <div><label for="age">Age:<input type="text" placeholder="Please, enter here" name="age"></label></div>
 
                <div>
-                <label for="gender">What's your gender?</label>
+                <label for="gender">What's your Gender?:</label>
                   <input type="radio" name="gender"><label>Male</label>
                   <input type="radio" name="gender"><label>Female</label>
               </div>
@@ -29,7 +50,7 @@
               <div class=""><label for="location">Location:<input type="text" value="Austin, TX" name="location"></label></div>
 
               <div>
-                <label for="diet">Diet</label>
+                <label for="diet">Diet:</label>
                   <input type="radio" name="diet"><label>Vegetarian</label>
                   <input type="radio" name="diet"><label>Vegan</label>
                   <input type="radio" name="diet"><label>Meat Only</label>
@@ -37,7 +58,7 @@
               </div>
 
               <div>
-                <label for="outlook">What is your outlook like?</label>
+                <label for="outlook">What is your Outlook like?:</label>
                   <input type="radio" name="outlook"><label>Positive</label>
                   <input type="radio" name="outlook"><label>Neutral</label>
                   <input type="radio" name="outlook"><label>Negative</label>
@@ -45,64 +66,74 @@
               </div>
 
               <div>
-                <label for="sleep">How often do you sleep?</label>
+                <label for="sleep">How often do you Sleep?:</label>
                   <input type="radio" name="sleep"><label>10+ Hours</label>
                   <input type="radio" name="sleep"><label>6-10 Hours</label>
                   <input type="radio" name="sleep"><label>Less than 6 Hours</label>
                   <input type="radio" name="sleep"><label>I'll sleep when I'm dead</label>
               </div>
 
+            <!-- Describes all OR questions -->
             <div class="row">
-            <div class="large-8 large-centered columns">
-              <div class="or-question">
-                  <p>Right-Handed OR Left-Handed?</p>
-                    <div><a href="#" name="hand" class="button">Right-Handed</a></div>
-                    <div><a href="#" name="hand" class="button">Left-Handed</a></div>
-              </div>
+              <div class="or-question-container">
+                <div class="row or-question">
+                    <p>Left-Handed <span class="or-keyword">OR</span> Right-Handed?</p>
+                      <div class="large-6 columns left"><a href="#" name="hand" class="button">Left-Handed</a></div>
+                      <div class="large-6 columns right"><a href="#" name="hand" class="button">Right-Handed</a></div>
+                </div>
 
-              <div class="or-question">
-                  <p>Sports OR Video Games?</p>
-                    <div><a href="#" name="sport" class="button">Sports</a></div>
-                    <div><a href="#" name="sport" class="button">Video Games</a></div>
-              </div>
+                <div class="row or-question">
+                    <p>Sports <span class="or-keyword">OR</span> Video Games?</p>
+                      <div class="large-6 columns left"><a href="#" name="sport" class="button">Sports</a></div>
+                      <div class="large-6 columns right"><a href="#" name="sport" class="button">Video Games</a></div>
+                </div>
 
-              <div class="or-question">
-                  <p>Beer OR Liquor</p>
-                    <div><a href="#" name="drink" class="button">Beer</a></div>
-                    <div><a href="#" name="drink" class="button">Liquor</a></div>
-              </div>
+                <div class="row or-question">
+                    <p>Beer <span class="or-keyword">OR</span> Liquor</p>
+                      <div class="large-6 columns left"><a href="#" name="drink" class="button">Beer</a></div>
+                      <div class="large-6 columns right"><a href="#" name="drink" class="button">Liquor</a></div>
+                </div>
 
-              <div class="or-question">
-                  <p>Republican OR Democrat?</p>
-                    <div><a href="#" name="politics" class="button">Republican</a></div>
-                    <div><a href="#" name="politics" class="button">Democrat</a></div>
-              </div>
+                <div class="row or-question">
+                    <p>Republican <span class="or-keyword">OR</span> Democrat?</p>
+                      <div class="large-6 columns left"><a href="#" name="politics" class="button">Republican</a></div>
+                      <div class="large-6 columns right"><a href="#" name="politics" class="button">Democrat</a></div>
+                </div>
 
-              <div class="or-question">
-                  <p>Dirty Sixth OR Rainey?</p>
-                    <div><a href="#" name="nightlife" class="button">Dirty Sixth</a></div>
-                    <div><a href="#" name="nightlife" class="button">Rainey</a></div>
-              </div>
+                <div class="row or-question">
+                    <p>Dirty Sixth <span class="or-keyword">OR</span> Rainey?</p>
+                      <div class="large-6 columns left"><a href="#" name="nightlife" class="button">Dirty Sixth</a></div>
+                      <div class="large-6 columns right"><a href="#" name="nightlife" class="button">Rainey</a></div>
+                </div>
 
-              <div class="or-question">
-                  <p>Sega OR Nintendo?</p>
-                    <div><a href="#" name="game-console" class="button">Sega</a></div>
-                    <div><a href="#" name="game-console" class="button">Nintendo</a></div>
-              </div>
+                <div class="row or-question">
+                    <p>Sega <span class="or-keyword">OR</span> Nintendo?</p>
+                      <div class="large-6 columns left"><a href="#" name="game-console" class="button">Sega</a></div>
+                      <div class="large-6 columns right"><a href="#" name="game-console" class="button">Nintendo</a></div>
+                </div>
 
-              <div class="or-question">
-                  <p>Ruby OR JavaScript?</p>
-                    <div><a href="#" name="language" class="button">Ruby</a></div>
-                    <div><a href="#" name="language" class="button">JavaScript</a></div>
-              </div>
-            </div>
-            </div>
+                <div class="row or-question">
+                    <p>Ruby <span class="or-keyword">OR</span> JavaScript?</p>
+                      <div class="large-6 columns left"><a href="#" name="language" class="button">Ruby</a></div>
+                      <div class="large-6 columns right"><a href="#" name="language" class="button">JavaScript</a></div>
+                </div>
 
+             </div>
+           </div>
+
+           <!-- Describes the submit button -->
+           <div class="submit-container">
+              <input class="form-submit" type="button" value="submit">
+           </div>
         </form>
       </div>
+      </div>
 
-    <script type="text/javascript" src="effects.js"></script>
-    <script src="jquery-1.11.0.js"></script>
+<!--     // <script src="js/jquery-1.11.0.js"></script> -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+    <script src="js/skrollr/src/skrollr.js"></script>
+    <script src="js/effects.js"></script>
   </body>
 </html>
 

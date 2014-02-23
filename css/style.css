@@ -66,8 +66,34 @@ body {
 }
 
 
-/* Everything below relates to the form */
+/*Results information*/
 
+.form-container.results {
+  background-color: rgb(153,255,255) !important;
+  padding: 0;
+}
+
+.user-response.results {
+  position: relative;
+}
+
+#consolation h3 {
+  font-family: Ruda;
+  font-size: 1em;
+}
+
+#chart_div {
+  border-radius: 1em;
+  transition: all .15s ease-in;
+}
+
+#chart_div:hover {
+  margin-top: -10px;
+}
+
+
+
+/* Everything below relates to the form */
 
 .form-container {
   background-color: rgb(7,50,64) !important;
@@ -75,6 +101,9 @@ body {
   margin: 0 auto !important;
   position: relative;
 }
+
+
+
 
 #avatar1-form {
   position: absolute;

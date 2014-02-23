@@ -54,21 +54,21 @@
     <!-- The Form -->
         <div class="form-container">
           <img id="avatar1-form" src="css/images/avatar1.png">
-        <form class="user-response" method="post" action="/response">
+        <form class="user-response" method="post" action="/results">
               <!-- Describes all open and multiple choice questions -->
-              <div class="question-container first"><label for="name" class="question" >Name:<input type="text" placeholder="Please, enter here" name="name"></label></div>
+              <div class="question-container first"><label for="name" id="name" class="question" >Name:<input type="text" placeholder="Your name goes here!" name="name"></label></div>
 
-              <div class="question-container"><label for="age" class="question">Age:<input type="text" placeholder="Please, enter here" name="age"></label></div>
+              <div class="question-container"><label for="age" class="question">Age:<input type="text" placeholder="Please enter your age" name="current_age"></label></div>
+
+              <div class="question-container"><label for="location" class="question">Location:<input type="text" placeholder="City, ST" name="location"></label></div>
 
                <div class="question-container">
                 <label for="gender" class="question radio">What's your Gender?</label>
                 <div class="radio-choice">
-                  <input type="radio" name="gender" value="male"><label>Male</label>
-                  <input type="radio" name="gender" value="female"><label>Female</label>
+                  <input type="radio" name="gender" id="gender_male" value="male"><label>Male</label>
+                  <input type="radio" name="gender" id="gender_female" value="female"><label>Female</label>
                 </div>
               </div>
-
-              <div class="question-container"><label for="location" class="question">Location:<input type="text" value="Austin, TX" name="location"></label></div>
 
               <div class="question-container">
                 <label for="diet" class="question radio">Diet</label>
@@ -83,7 +83,7 @@
               <div class="question-container">
                 <label for="outlook" class="question radio">What's your Outlook like?</label>
                 <div class="radio-choice">
-                  <input type="radio" name="outlook" value="positive"><label>Positive</label>
+                  <input type="radio" name="outlook" value="cheerful"><label>Positive</label>
                   <input type="radio" name="outlook" value="neutral"><label>Neutral</label>
                   <input type="radio" name="outlook" value="negative"><label>Negative</label>
                   <input type="radio" name="outlook" value="fml"><label>FML</label>
@@ -150,7 +150,7 @@
 
            <!-- Describes the submit button -->
            <div class="submit-container">
-              <input class="form-submit" type="button" value="submit">
+              <input class="form-submit" type="button" value="When do I meet my Maker">
            </div>
 
            <!-- Invisible container with input fields -->
@@ -163,8 +163,6 @@
               <input type="text" id="question-sega_nin" name="sega_nin">
               <input type="text" id="question-ruby_js" name="ruby_js">
            </div>
-
-
         </form>
       </div>
 

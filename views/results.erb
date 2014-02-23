@@ -1,5 +1,12 @@
 <% load './lib/death_randomizer.rb' %>
 
+<div id="background" data--100="background-color: rgb(153,255,255); width:100%; height:200px;"></div>
+
+<div data-0="opacity: 1; width: 100%; position:absolute; text-align: center; top:50px;" data-200="opacity: 0; width: 100%; position:absolute; text-align: center; top:100px;">
+  <p style="font-family: Acme; font-size: 5em; color:#274563; line-spacing: .1em;">See below!</p>
+</div>
+
+<!--
 <% if @new_result %>
   <a href='/auth/twitter'>Tweet your results!</a><br /><br />
   <% if @new_result.death_age > 999 %>
@@ -12,10 +19,77 @@
     <%= @new_result.name %> - <%= Death.get_random_synonym %><%= @new_result.death_age %>. <br /><br />
     Cause of death: <a href="<%= death_url %>"><%= death_cause %></a> <br /><br />
   <% end %>
-  <a href="/">Go back and try again</a> or scroll down to browse the data!
 <% end %>
+-->
 
 <br /><br />
+
+<div class="form-container results">
+      <div class="user-response results">
+
+      <% if @new_result %>
+        <a href='/auth/twitter'>Tweet your results!</a><br /><br />
+        <% if @new_result.death_age > 999 %> <h3> <%= @new_result.name %>, it looks like you are IMMORTAL! </h3> <br />
+        <% else %>
+          <% death_synonym = Death.get_random_synonym %>
+          <% random_cause = Death.get_random_cause %>
+          <% death_cause = random_cause[0] %>
+          <% death_url = random_cause[1] %>
+
+          <div id="age-of-death">
+            <h1>What's going to happen:</h1>
+            <br>
+            <br>
+            <p> <%= Death.get_random_synonym %><%= @new_result.death_age %>! </p>
+          </div>
+
+          <div id="cause">
+            <h1>Cause of prolonged sleep:</h1>
+            <br>
+            <br>
+            <p> <a href="<%= death_url %>"><%= death_cause %></a> </p>
+          </div>
+
+          <div id="consolation">
+            <% if @new_result.outlook == 'cheerful' %> <h3> Maybe if you weren't so <%= @new_result.outlook %> you would have been more aware! </h3>
+            <% elsif @new_result.diet == 'children' %> <h3> Why didn't you ate less children Mr. Tyson, you would have had more nutrients ...and friends! </h3>
+            <% elsif @new_result.sleep == 'ten' %> <h3> Why did you sleep so much, coders don't sleep! </h3>
+            <% elsif @new_result.dirty_rainey == 'dirty' %> <h3> Dirty 6th, enough said. </h3>
+            <% elsif @new_result.sport_vid == 'sport' %> <h3> Sports?? What's a sport, please refer to Terminal: $ man sport </h3>
+            <% elsif @new_result.handed == 'left' %> <h3> Left handers are... "different" </h3>
+            <% elsif @new_result.beer_liq == 'beer' %> <h3> Liquor before beer and you're in the clear, c'mon you know that!</h3>
+            <% elsif @new_result.sega_nin == 'sega' %> <h3> So you're telling me you like Sonic more than Mario?? </h3>
+            <% elsif @new_result.current_age <= 23 %>  <h3> If you were older you would have been wiser! </h3>
+            <% elsif @new_result.ruby_js == 'css' %> <h3> lol css, good one </h3>
+            <% else %> <h3> I have no advice for you <%= @new_result.name %>, sorry no immortality here </h3>
+            <% end %>
+          </div>
+        <% end %>
+      <% end %>
+
+    <div class="row">
+      <div class="google_chart" id="chart_div" style="width: 900px; height: 500px;"></div>
+    </div>
+
+    <div class="row">
+      <div class="google_chart" id="chart_gauge_immortal" style="width: 500px; height :500px;"></div>
+    </div>
+
+    <% if @new_result %>
+      <a href="/">Go back and try again</a>!
+    <% else %>
+      <a href="/">Go back to the main page</a>!
+    <% end %>
+
+
+  </div>
+</div>
+
+<script type="text/javascript">
+
+      var results = <%= @results.to_json %>;
+
+</script>
 
 <!--
 <ul>
@@ -44,16 +118,3 @@
 </ul>
 -->
 
-<div class="row">
-  <div class="google_chart" id="chart_div" style="width: 900px; height: 500px;"></div>
-</div>
-
-<div class="row">
-  <div class="google_chart" id="chart_gauge_immortal" style="width: 500px; height :500px;"></div>
-</div>
-
-<script type="text/javascript">
-
-var results = <%= @results.to_json %>;
-
-</script>

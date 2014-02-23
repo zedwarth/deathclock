@@ -25,7 +25,7 @@ client = Twitter::REST::Client.new do |config|
   end
 
 get '/' do
-
+  @title = "Meet Your Maker"
   erb :index
 end
 
@@ -65,7 +65,7 @@ end
 
 get '/results' do
   @results = Result.order("created_at DESC")
-  @title = "Death Results"
+  @title = "Meet Your Maker - Results"
 
   erb :results
 end
@@ -90,15 +90,15 @@ get '/auth/:provider/callback' do
 
   if @results
     # client_new.update_with_media("I'm gonna die!", File.new("http://imgur.com/75Jr3.jpg"))
-    client_new.update("I'm going to die when I'm #{@results.death_age}. What about you? http://meetyourmaker.herokuapp.com/ #MKS")
+    client_new.update("I'm going to live to age #{@results.death_age}! When will you Meet Your Maker? http://meetyourmaker.herokuapp.com/ #MKS")
   end
 
 
 
-  erb "<h1>#{params[:provider]}</h1>
-       <pre>#{JSON.pretty_generate(request.env['omniauth.auth'])}</pre>"
+  # erb "<h1>#{params[:provider]}</h1>
+  #      <pre>#{JSON.pretty_generate(request.env['omniauth.auth'])}</pre>"
 
-
+  redirect '/results'
 
 end
 

@@ -1,10 +1,9 @@
 <% load './lib/death_randomizer.rb' %>
 
-<a href='/auth/twitter'>Tweet your results!</a><br /><br />
-
 <%= @title %><br /><br />
 
 <% if @new_result %>
+  <a href='/auth/twitter'>Tweet your results!</a><br /><br />
   <% death_synonym = Death.get_random_synonym %>
   <% random_cause = Death.get_random_cause %>
   <% death_cause = random_cause[0] %>

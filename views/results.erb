@@ -31,7 +31,7 @@
         <!-- <a href='/auth/twitter'>Tweet your results!</a><br /><br /> -->
         <a href='/auth/twitter'><img class="twitter-icon" src="/images/Twitter-Logo.png"></a><span class="result">Tweet out your result!</span><br /><br />
         <% if @new_result.death_age > 999 %>
-           <h3 class="cause"><%= @new_result.name %>, it looks like you are IMMORTAL!</h3>
+            <h3 class="cause"><%= @new_result.name %>, it looks like you are IMMORTAL!</h3>
         <% else %>
           <% death_synonym = Death.get_random_synonym %>
           <% random_cause = Death.get_random_cause %>

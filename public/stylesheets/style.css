@@ -125,6 +125,23 @@ body {
   margin-bottom: 4em;
 }
 
+.twitter-icon {
+  height: 5em;
+  /*border-radius: 50%;*/
+  -webkit-filter: grayscale(100%);
+}
+
+.twitter-icon:hover {
+  -webkit-filter: grayscale(0%);
+}
+
+.form-submit {
+  border-radius: 1em;
+  background-color: rgb(7,50,64) !important;
+}
+
+
+
 
 
 /* Everything below relates to the form */
@@ -250,13 +267,14 @@ span {
 
 .form-submit {
   border-radius: .3em;
-  height: 10em;
-  width: 30em;
+  height: 5em;
+  width: 20em;
   text-align: center;
+  font-family: Acme;
+  color: white;
 }
 
 .invisible-container {
   display:none !important;
 }
-
 

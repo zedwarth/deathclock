@@ -177,14 +177,18 @@ var pieCharts = function() {
 		[ 'Female',  0] 
 	];
 
-	for ( var i = 0; i < results.length; i++) {
-		if (results[i].gender === "male") {
-			gender[1][1]++;
-		} else {
-			gender[2][1]++;
+	var seedArray = function ( array, object, control ) {
+		for ( var i = 0; i < results.length; i++) {
+			if ( results[i][object] === control ) {
+				array[1][1]++;
+			} else {
+				array[2][1]++;
+			}; 
 		};
 	};
 
+	seedArray( gender, 'gender', 'male');
+	
 	var handed = [
 		[ 'Hand', 'People' ],
 		[ 'Left',  0 ],
@@ -209,19 +213,19 @@ var pieCharts = function() {
 		[ 'Democrat', 0]
 	];
 
-	var street [
+	var street = [
 		[ 'Street', 'People' ],
 		[ 'Dirty', 0 ],
 		[ 'Rainey', 0 ]
 	];
 
-	var fanboy [
+	var fanboy = [
 		[ 'Fanboy/ Fangirl', 'People' ],
 		[ 'Sega', 0 ],
 		[ 'Nintendo', 0 ]
 	];
 
-	var language [
+	var language = [
 		[ 'Language', 'People' ],
 		[ 'Ruby/JS', 0 ],
 		[ 'CSS', 0 ]
@@ -270,6 +274,5 @@ var gaugeChart = function () {
 	// Create and draw the visualization.
 	var immortalChart = new google.visualization.Gauge(document.getElementById('chart_gauge_immortal'));
 	immortalChart.draw(immortalData, immortalOptions);
-	console.log("I run!");
 };
 gaugeChart();

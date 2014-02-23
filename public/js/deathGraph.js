@@ -251,6 +251,15 @@ var pieCharts = function() {
 	var fanboyPie   = new google.visualization.PieChart(document.getElementById('fanboyPie'));
 	var languagePie = new google.visualization.PieChart(document.getElementById('languagePie'));
 
+	genderPie.draw(google.visualization.arrayToDataTable(gender));
+	handedPie.draw(google.visualization.arrayToDataTable(handed));
+	playPie.draw(google.visualization.arrayToDataTable(play));
+	alcoholPie.draw(google.visualization.arrayToDataTable(alcohol));
+	partyPie.draw(google.visualization.arrayToDataTable(party));
+	streetPie.draw(google.visualization.arrayToDataTable(street));
+	fanboyPie.draw(google.visualization.arrayToDataTable(fanboy));
+	languagePie.draw(google.visualization.arrayToDataTable(language));
+
 };
 
 

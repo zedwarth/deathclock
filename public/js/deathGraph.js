@@ -114,7 +114,8 @@ var options = {
 				easing: 'in'},
 	vAxis: {viewWindow: {max: 1,
 						 min: 0},
-			direction: -1}
+			direction: -1},
+	backgroundColor: 'rgb(90,90,90)'
 };
 
 var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
@@ -241,6 +242,10 @@ var pieCharts = function() {
 	seedArray( language,   'ruby_js', 'ruby');
 
 	// Google pie graphs
+	
+	var options = {
+		backgroundColor: 'rgb(90,90,90)'
+	};
 
 	var genderPie   = new google.visualization.PieChart(document.getElementById('genderPie'));
 	var handedPie   = new google.visualization.PieChart(document.getElementById('handedPie'));
@@ -251,14 +256,14 @@ var pieCharts = function() {
 	var fanboyPie   = new google.visualization.PieChart(document.getElementById('fanboyPie'));
 	var languagePie = new google.visualization.PieChart(document.getElementById('languagePie'));
 
-	genderPie.draw(google.visualization.arrayToDataTable(gender));
-	handedPie.draw(google.visualization.arrayToDataTable(handed));
-	playPie.draw(google.visualization.arrayToDataTable(play));
-	alcoholPie.draw(google.visualization.arrayToDataTable(alcohol));
-	partyPie.draw(google.visualization.arrayToDataTable(party));
-	streetPie.draw(google.visualization.arrayToDataTable(street));
-	fanboyPie.draw(google.visualization.arrayToDataTable(fanboy));
-	languagePie.draw(google.visualization.arrayToDataTable(language));
+	genderPie.draw(google.visualization.arrayToDataTable(gender), options);
+	handedPie.draw(google.visualization.arrayToDataTable(handed), options);
+	playPie.draw(google.visualization.arrayToDataTable(play), options);
+	alcoholPie.draw(google.visualization.arrayToDataTable(alcohol), options);
+	partyPie.draw(google.visualization.arrayToDataTable(party), options);
+	streetPie.draw(google.visualization.arrayToDataTable(street), options);
+	fanboyPie.draw(google.visualization.arrayToDataTable(fanboy), options);
+	languagePie.draw(google.visualization.arrayToDataTable(language), options);
 
 };
 

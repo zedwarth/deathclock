@@ -133,6 +133,22 @@ form {
 }
 
 /*OR questions*/
+
+.button {
+  border-radius: .5em;
+  background-color: rgb(121,121, 121) !important;
+}
+
+
+.faded {
+  background-color: rgb(7,50,64) !important;
+}
+
+.fade {
+  opacity: 0.5;
+  background-color: rgb(7,50,64) !important;
+}
+
 .or-question-container {
   margin: 0 auto;
   max-width: 30rem;

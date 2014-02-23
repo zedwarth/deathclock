@@ -110,9 +110,11 @@ var data = google.visualization.arrayToDataTable(lifeArray);
 // Chart Options
 var options = {
 	title: 'Death Chart',
-	vAxis: {direction: -1},
-	animation: {duration: 4000,
-				easing: 'in'}
+	animation: {duration: 3000,
+				easing: 'in'},
+	vAxis: {viewWindow: {max: 1,
+						 min: 0},
+			direction: -1}
 };
 
 var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
@@ -150,7 +152,6 @@ data.addColumn('number', results[0].name);
 
 // Populate dataTable
 for ( i = 0; i <= 100; i++ ) {
-	console.log(userData[i]);
 	data.setValue(i, 3, userData[i]);
 };
 

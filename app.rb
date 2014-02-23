@@ -78,7 +78,7 @@ get '/auth/:provider/callback' do
 
   if @results
     # client_new.update_with_media("I'm gonna die!", File.new("http://imgur.com/75Jr3.jpg"))
-    client_new.update("I'm going to die when I'm #{@results.death_age}. http://meetyourmaker.herokuapp.com/ #MKS")
+    client_new.update("I'm going to die when I'm #{@results.death_age}. What about you? http://meetyourmaker.herokuapp.com/ #MKS")
   end
 
 

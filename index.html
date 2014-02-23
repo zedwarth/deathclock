@@ -10,10 +10,6 @@
   </head>
   <body style="max-height: 4000px;">
 
-
-
-
-
     <div id="background" data-0="background-color: rgb(153,255,255); width:100%; height:5950px;" data-4500="background-color: rgb(153,255,255);" data-5250="background-color: rgb(0,51,102);">
     </div>
     <div data-0="width: 100%; text-align: center; position:fixed; top:100px;" data-100="position:fixed; top: 100px; transform-origin:600px 100px; transform:rotate(0deg);" data-800="position:fixed; top: -300px; transform-origin:600px 100px; transform:rotate(360deg);">
@@ -44,17 +40,13 @@
 
     <div id="avatar-cloud" data-0="position: absolute; bottom:-100px; left:45%; opacity: 0;" data-1200="position:absolute; opacity: 0; top:1900px;" data-2000="position: absolute; top:2100px; opacity: 1;" data-4000="position: absolute; top:4000px; opacity: 1;"data-4000="position: absolute; top:500px; opacity: 0;"><img src="css/images/avatar2.png" style="width:200px; height: 267px;"></div>
 
-    <div id="text" data-2500="position:fixed; top:500px; width:100%; text-align: center; opacity:0;" data-2700="position:fixed; top:400px; width:100%; text-align: center; opacity:1;" data-3100="position:fixed; top:400px; width:100%; text-align: center; opacity:1;" data-3400="position:fixed; top:250px; width:100% text-align: right; opacity: 0;">
+    <div class="text-cloud" data-2500="position:fixed; top:500px; width:100%; text-align: center; opacity:0;" data-2700="position:fixed; top:400px; width:100%; text-align: center; opacity:1;" data-3100="position:fixed; top:400px; width:100%; text-align: center; opacity:1;" data-3400="position:fixed; top:250px; width:100% text-align: right; opacity: 0;">
             <p style="font-family: Acme; font-size: 5em; color:#274563; line-spacing: .1em;">"Think you're Immortal?"</p>
     </div>
 
-    <div id="text" data-3500="position:fixed; top:500px; width:100%; text-align: center; opacity:0;" data-3700="position:fixed; top:400px; width:100%; text-align: center; opacity:1;" data-4200="position:fixed; top:250px; width:100% text-align: right; opacity: 0;">
+    <div class="text-cloud" data-3500="position:fixed; top:500px; width:100%; text-align: center; opacity:0;" data-3700="position:fixed; top:400px; width:100%; text-align: center; opacity:1;" data-4200="position:fixed; top:250px; width:100% text-align: right; opacity: 0;">
             <p style="font-family: Acme; font-size: 5em; color:#274563; line-spacing: .1em;">"Only one way to find out!"</p>
     </div>
-
-
-    <!-- <div id="avatar-cloud" data-0="width: 100%; text-align: center; position:aboslute; bottom:-100px; opacity:0;" data-1200="position:absolute; top:100px;" data-1500="position:fixed; top: 100px; opacity:1;" data-2000="position:fixed; top: 100px; opacity:0;"><img src="css/images/avatar2.png" style="width:200px; height:267px;"></div> -->
-
 
 
         <div class="form-container">
@@ -67,34 +59,34 @@
 
                <div>
                 <label for="gender">What's your Gender?:</label>
-                  <input type="radio" name="gender"><label>Male</label>
-                  <input type="radio" name="gender"><label>Female</label>
+                  <input type="radio" name="gender" value="male"><label>Male</label>
+                  <input type="radio" name="gender" value="female"><label>Female</label>
               </div>
 
               <div class=""><label for="location">Location:<input type="text" value="Austin, TX" name="location"></label></div>
 
               <div>
                 <label for="diet">Diet:</label>
-                  <input type="radio" name="diet"><label>Vegetarian</label>
-                  <input type="radio" name="diet"><label>Vegan</label>
-                  <input type="radio" name="diet"><label>Meat Only</label>
-                  <input type="radio" name="diet"><label>Children</label>
+                  <input type="radio" name="diet" value="vegetarian"><label>Vegetarian</label>
+                  <input type="radio" name="diet" value="vegan"><label>Vegan</label>
+                  <input type="radio" name="diet" value="meat"><label>Meat</label>
+                  <input type="radio" name="diet" value="children"><label>Children</label>
               </div>
 
               <div>
                 <label for="outlook">What is your Outlook like?:</label>
-                  <input type="radio" name="outlook"><label>Positive</label>
-                  <input type="radio" name="outlook"><label>Neutral</label>
-                  <input type="radio" name="outlook"><label>Negative</label>
-                  <input type="radio" name="outlook"><label>Fuck Life</label>
+                  <input type="radio" name="outlook" value="positive"><label>Positive</label>
+                  <input type="radio" name="outlook" value="neutral"><label>Neutral</label>
+                  <input type="radio" name="outlook" value="negative"><label>Negative</label>
+                  <input type="radio" name="outlook" value="fml"><label>Fuck Life</label>
               </div>
 
               <div>
                 <label for="sleep">How often do you Sleep?:</label>
-                  <input type="radio" name="sleep"><label>10+ Hours</label>
-                  <input type="radio" name="sleep"><label>6-10 Hours</label>
-                  <input type="radio" name="sleep"><label>Less than 6 Hours</label>
-                  <input type="radio" name="sleep"><label>I'll sleep when I'm dead</label>
+                  <input type="radio" name="sleep" value="ten"><label>10+ Hours</label>
+                  <input type="radio" name="sleep" value="six"><label>6-10 Hours</label>
+                  <input type="radio" name="sleep" value="less-six"><label>Less than 6 Hours</label>
+                  <input type="radio" name="sleep" value="dead"><label>I'll sleep when I'm dead</label>
               </div>
 
             <!-- Describes all OR questions -->
@@ -102,44 +94,44 @@
               <div class="or-question-container">
                 <div class="row or-question">
                     <p>Left-Handed <span class="or-keyword">OR</span> Right-Handed?</p>
-                      <div class="large-6 columns left"><a href="#" name="hand" class="button">Left-Handed</a></div>
-                      <div class="large-6 columns right"><a href="#" name="hand" class="button">Right-Handed</a></div>
+                      <div class="large-6 columns left"><a href="#" name="hand" class="button" value="left">Left-Handed</a></div>
+                      <div class="large-6 columns right"><a href="#" name="hand" class="button" value="right">Right-Handed</a></div>
                 </div>
 
                 <div class="row or-question">
                     <p>Sports <span class="or-keyword">OR</span> Video Games?</p>
-                      <div class="large-6 columns left"><a href="#" name="sport" class="button">Sports</a></div>
-                      <div class="large-6 columns right"><a href="#" name="sport" class="button">Video Games</a></div>
+                      <div class="large-6 columns left"><a href="#" name="sport" class="button" value="sports">Sports</a></div>
+                      <div class="large-6 columns right"><a href="#" name="sport" class="button" value="video_games">Video Games</a></div>
                 </div>
 
                 <div class="row or-question">
                     <p>Beer <span class="or-keyword">OR</span> Liquor</p>
-                      <div class="large-6 columns left"><a href="#" name="drink" class="button">Beer</a></div>
-                      <div class="large-6 columns right"><a href="#" name="drink" class="button">Liquor</a></div>
+                      <div class="large-6 columns left"><a href="#" name="drink" class="button" value="beer">Beer</a></div>
+                      <div class="large-6 columns right"><a href="#" name="drink" class="button" value="liquor">Liquor</a></div>
                 </div>
 
                 <div class="row or-question">
                     <p>Republican <span class="or-keyword">OR</span> Democrat?</p>
-                      <div class="large-6 columns left"><a href="#" name="politics" class="button">Republican</a></div>
-                      <div class="large-6 columns right"><a href="#" name="politics" class="button">Democrat</a></div>
+                      <div class="large-6 columns left"><a href="#" name="politics" class="button" value="republican">Republican</a></div>
+                      <div class="large-6 columns right"><a href="#" name="politics" class="button" value="democrat">Democrat</a></div>
                 </div>
 
                 <div class="row or-question">
                     <p>Dirty Sixth <span class="or-keyword">OR</span> Rainey?</p>
-                      <div class="large-6 columns left"><a href="#" name="nightlife" class="button">Dirty Sixth</a></div>
-                      <div class="large-6 columns right"><a href="#" name="nightlife" class="button">Rainey</a></div>
+                      <div class="large-6 columns left"><a href="#" name="nightlife" class="button" value="dirty">Dirty Sixth</a></div>
+                      <div class="large-6 columns right"><a href="#" name="nightlife" class="button" value="rainey">Rainey</a></div>
                 </div>
 
                 <div class="row or-question">
                     <p>Sega <span class="or-keyword">OR</span> Nintendo?</p>
-                      <div class="large-6 columns left"><a href="#" name="game-console" class="button">Sega</a></div>
-                      <div class="large-6 columns right"><a href="#" name="game-console" class="button">Nintendo</a></div>
+                      <div class="large-6 columns left"><a href="#" name="game-console" class="button" value="sega">Sega</a></div>
+                      <div class="large-6 columns right"><a href="#" name="game-console" class="button" value="nintendo">Nintendo</a></div>
                 </div>
 
                 <div class="row or-question">
                     <p>Ruby <span class="or-keyword">OR</span> JavaScript?</p>
-                      <div class="large-6 columns left"><a href="#" name="language" class="button">Ruby</a></div>
-                      <div class="large-6 columns right"><a href="#" name="language" class="button">JavaScript</a></div>
+                      <div class="large-6 columns left"><a href="#" name="language" class="button" value="ruby">Ruby</a></div>
+                      <div class="large-6 columns right"><a href="#" name="language" class="button" value="javascript">JavaScript</a></div>
                 </div>
 
              </div>
@@ -151,8 +143,6 @@
            </div>
         </form>
       </div>
-
-
 
 
     <script src="js/jquery-1.11.0.js"></script>

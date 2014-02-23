@@ -138,6 +138,15 @@ var updateUserData = function () {
 	}
 };
 
+var deathYear = function () {
+	var age = results[0].death_age;
+	var size = userData.length
+	userData[age] = 1;
+	for ( var i = age + 1; i < size -1; i++ ) {
+		userData[i] = 2;
+	};
+};
+
 // Find out the last users sex
 if ( results[0].gender === "male" ) {
 	grabColumn( 1 );
@@ -146,6 +155,7 @@ if ( results[0].gender === "male" ) {
 };
 // Generate new userData with death coefficient
 updateUserData();
+deathYear();
 
 // Add last user as new column header
 data.addColumn('number', results[0].name);

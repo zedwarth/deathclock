@@ -8,16 +8,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Meet your Maker!</title>
   </head>
-  <body style="max-height: 10000px;">
+  <body style="max-height: 4000px;">
 
 
 
 
 
-    <div id="background" data-0="background-color: rgb(153,255,255); width:100%; height:10000px;" data-8000="background-color: rgb(0,204,204);" data-9000="background-color: rgb(0,51,102);">
+    <div id="background" data-0="background-color: rgb(153,255,255); width:100%; height:5950px;" data-4500="background-color: rgb(153,255,255);" data-5250="background-color: rgb(0,51,102);">
     </div>
     <div data-0="width: 100%; text-align: center; position:fixed; top:100px;" data-100="position:fixed; top: 100px; transform-origin:600px 100px; transform:rotate(0deg);" data-800="position:fixed; top: -300px; transform-origin:600px 100px; transform:rotate(360deg);">
-      <a href="#"><img class="avatar" src="http://placehold.it/300x300" style="height:300px; width:300px;"></a>
+      <a href="#"><img class="avatar" src="css/images/avatar1.png" style="height:267px; width:200px;"></a>
     </div>
 
     <div data-0="opacity: 1; width: 100%; position:fixed; text-align: center; top:500px;" data-200="opacity: 1; width: 100%; position:fixed; text-align: center; top:500px;" data-800="opacity: 0; position:fixed; text-align: center; top:500px;">
@@ -42,11 +42,23 @@
 
     <div id="cloud9" data-0="position: absolute; bottom:-100px; left:50%;" data-2000="position: absolute; top:2500px; opacity: 1;" data-2600="position: absolute; top:2500px; opacity: 0;"><img src="css/images/cloud.png" style="width:250px; height:250px;"></div>
 
-  <!--   <div id="cloud10" data-0="position: absolute; bottom:-100px; left:5%;" data-2000="position: absolute; top:2500px; opacity: 1;" data-3500="position: absolute; top:2800px; opacity: 0;"><img src="css/images/cloud.png" style="width:500px; height:500px;"></div> -->
+    <div id="avatar-cloud" data-0="position: absolute; bottom:-100px; left:45%; opacity: 0;" data-1200="position:absolute; opacity: 0; top:1900px;" data-2000="position: absolute; top:2100px; opacity: 1;" data-4000="position: absolute; top:4000px; opacity: 1;"data-4000="position: absolute; top:500px; opacity: 0;"><img src="css/images/avatar2.png" style="width:200px; height: 267px;"></div>
+
+    <div id="text" data-2500="position:fixed; top:500px; width:100%; text-align: center; opacity:0;" data-2700="position:fixed; top:400px; width:100%; text-align: center; opacity:1;" data-3100="position:fixed; top:400px; width:100%; text-align: center; opacity:1;" data-3400="position:fixed; top:250px; width:100% text-align: right; opacity: 0;">
+            <p style="font-family: Acme; font-size: 5em; color:#274563; line-spacing: .1em;">"Think you're Immortal?"</p>
+    </div>
+
+    <div id="text" data-3500="position:fixed; top:500px; width:100%; text-align: center; opacity:0;" data-3700="position:fixed; top:400px; width:100%; text-align: center; opacity:1;" data-4200="position:fixed; top:250px; width:100% text-align: right; opacity: 0;">
+            <p style="font-family: Acme; font-size: 5em; color:#274563; line-spacing: .1em;">"Only one way to find out!"</p>
+    </div>
+
+
+    <!-- <div id="avatar-cloud" data-0="width: 100%; text-align: center; position:aboslute; bottom:-100px; opacity:0;" data-1200="position:absolute; top:100px;" data-1500="position:fixed; top: 100px; opacity:1;" data-2000="position:fixed; top: 100px; opacity:0;"><img src="css/images/avatar2.png" style="width:200px; height:267px;"></div> -->
 
 
 
         <div class="form-container">
+          <img id="avatar1-form" src="css/images/avatar1.png">
         <form class="user-response" method="post" action="/response">
               <!-- Describes all open and multiple choice questions -->
               <div><label for="name">Name:<input type="text" placeholder="Please, enter here" name="name"></label></div>

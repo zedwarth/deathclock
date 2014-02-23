@@ -306,3 +306,4 @@ var gaugeChart = function () {
 	immortalChart.draw(immortalData, immortalOptions);
 };
 gaugeChart();
+pieCharts();

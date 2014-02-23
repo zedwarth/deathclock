@@ -240,7 +240,16 @@ var pieCharts = function() {
 	seedArray( fanboy,   'sega_nin', 'sega');
 	seedArray( language,   'ruby-js', 'ruby');
 
-	// Google Piecharts
+	// Google pie graphs
+	
+	var genderPie   = new google.visualization.PieChart(document.getElementById('genderPie'));
+	var handedPie   = new google.visualization.PieChart(document.getElementById('handedPie'));
+	var playPie     = new google.visualization.PieChart(document.getElementById('playPie'));
+	var alcoholPie  = new google.visualization.PieChart(document.getElementById('alcoholPie'));
+	var partyPie    = new google.visualization.PieChart(document.getElementById('partyPie'));
+	var streetPie   = new google.visualization.PieChart(document.getElementById('streetPie'));
+	var fanboyPie   = new google.visualization.PieChart(document.getElementById('fanboyPie'));
+	var languagePie = new google.visualization.PieChart(document.getElementById('languagePie'));
 
 };
 

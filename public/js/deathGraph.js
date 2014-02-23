@@ -133,7 +133,8 @@ var grabColumn = function ( index ) {
 };
 
 var updateUserData = function () {
-	for ( i in userData ) {
+	var size = userData.length -1;
+	for ( var i = results[0].current_age; i < size; i++ ) {
 		userData[i] = k * userData[i];
 	}
 };

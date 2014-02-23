@@ -1,14 +1,26 @@
-<a href='/auth/twitter'>Tweet your results!</a><br>
+<% load './lib/death_randomizer.rb' %>
 
-<%= @title %>
+<a href='/auth/twitter'>Tweet your results!</a><br /><br />
+
+<%= @title %><br /><br />
+
+<% if @new_result %>
+  <% death_synonym = Death.get_random_synonym %>
+  <% random_cause = Death.get_random_cause %>
+  <% death_cause = random_cause[0] %>
+  <% death_url = random_cause[1] %>
+  <%= @new_result.name %> - <%= Death.get_random_synonym %><%= @new_result.death_age %>. <br /><br />
+  Cause of death: <a href="<%= death_url %>"><%= death_cause %></a>
+<% end %>
+
+<br /><br />
 
 <ul>
 <% @results.each do |result| %>
   <li>
-    <h4>
-      <%= result.name %>, you will die when you are: <%= result.death_age %>
-    </h4>
     <p>
+      Name: <%= result.name %><br />
+      Death Age: <%= result.death_age %><br />
       Gender: <%= result.gender %><br />
       Current Age: <%= result.current_age %><br />
       Location:  <%= result.location %><br />

@@ -47,6 +47,7 @@ post '/results' do
     sleep: @sleep, death_age: @death_age)
 
   @results = Result.order("created_at DESC")
+  @new_result = @results[0]
 
   erb :results
 end

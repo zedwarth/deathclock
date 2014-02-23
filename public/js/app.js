@@ -37,7 +37,6 @@ $(document).ready(function (){
     $('#left').on('click', function (e) {
       e.preventDefault();
       $('#question-handed').val('left');
-      console.log( "Hoi");
     });
     $('#right').on('click', function (e) {
       e.preventDefault();

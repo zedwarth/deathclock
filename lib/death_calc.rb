@@ -24,7 +24,7 @@
       @death_age -= 8
     when 'vegetarian'
       @death_age -= 5
-    when 'both'
+    when 'meat'
       @death_age -= 3
     else # children
       @death_age -= 10
@@ -46,13 +46,13 @@
     puts @death_age
 
     case @sleep
-    when '10+ hours'
+    when 'ten'
       @death_age -= 2
-    when '6-10 hours'
+    when 'six'
       @death_age -= 0
-    when 'less than 6 hours'
+    when 'less-six'
       @death_age -= 2
-    else #never
+    else # dead
       @death_age -= 10
     end
 
@@ -129,7 +129,7 @@
 
     puts @death_age
 
-    if @sega_nin == 'nin' && @rep_dem == 'dem' && @outlook == 'cheerful' && @diet == 'both' && location == 'MakerSquare'
+    if @sega_nin == 'nin' && @rep_dem == 'dem' && @outlook == 'cheerful' && @diet == 'meat' && location == 'MakerSquare'
       @death_age = 999999999999999
     end
 

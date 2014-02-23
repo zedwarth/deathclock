@@ -94,44 +94,44 @@
               <div class="or-question-container">
                 <div class="row or-question">
                     <p>Left-Handed <span class="or-keyword">OR</span> Right-Handed?</p>
-                      <div class="large-6 columns left"><a href="#" name="hand" class="button" value="left">Left-Handed</a></div>
-                      <div class="large-6 columns right"><a href="#" name="hand" class="button" value="right">Right-Handed</a></div>
+                      <div class="large-6 columns left"><a href="#" class="button" id="left">Left-Handed</a></div>
+                      <div class="large-6 columns right"><a href="#" class="button" id="right">Right-Handed</a></div>
                 </div>
 
                 <div class="row or-question">
                     <p>Sports <span class="or-keyword">OR</span> Video Games?</p>
-                      <div class="large-6 columns left"><a href="#" name="sport" class="button" value="sports">Sports</a></div>
-                      <div class="large-6 columns right"><a href="#" name="sport" class="button" value="video_games">Video Games</a></div>
+                      <div class="large-6 columns left"><a href="#" class="button" id="sports">Sports</a></div>
+                      <div class="large-6 columns right"><a href="#" class="button" id="video_games">Video Games</a></div>
                 </div>
 
                 <div class="row or-question">
                     <p>Beer <span class="or-keyword">OR</span> Liquor</p>
-                      <div class="large-6 columns left"><a href="#" name="drink" class="button" value="beer">Beer</a></div>
-                      <div class="large-6 columns right"><a href="#" name="drink" class="button" value="liquor">Liquor</a></div>
+                      <div class="large-6 columns left"><a href="#" class="button" id="beer">Beer</a></div>
+                      <div class="large-6 columns right"><a href="#" class="button" id="liquor">Liquor</a></div>
                 </div>
 
                 <div class="row or-question">
                     <p>Republican <span class="or-keyword">OR</span> Democrat?</p>
-                      <div class="large-6 columns left"><a href="#" name="politics" class="button" value="republican">Republican</a></div>
-                      <div class="large-6 columns right"><a href="#" name="politics" class="button" value="democrat">Democrat</a></div>
+                      <div class="large-6 columns left"><a href="#" class="button" id="republican">Republican</a></div>
+                      <div class="large-6 columns right"><a href="#" class="button" id="democrat">Democrat</a></div>
                 </div>
 
                 <div class="row or-question">
                     <p>Dirty Sixth <span class="or-keyword">OR</span> Rainey?</p>
-                      <div class="large-6 columns left"><a href="#" name="nightlife" class="button" value="dirty">Dirty Sixth</a></div>
-                      <div class="large-6 columns right"><a href="#" name="nightlife" class="button" value="rainey">Rainey</a></div>
+                      <div class="large-6 columns left"><a href="#" class="button" id="dirty">Dirty Sixth</a></div>
+                      <div class="large-6 columns right"><a href="#" class="button" id="rainey">Rainey</a></div>
                 </div>
 
                 <div class="row or-question">
                     <p>Sega <span class="or-keyword">OR</span> Nintendo?</p>
-                      <div class="large-6 columns left"><a href="#" name="game-console" class="button" value="sega">Sega</a></div>
-                      <div class="large-6 columns right"><a href="#" name="game-console" class="button" value="nintendo">Nintendo</a></div>
+                      <div class="large-6 columns left"><a href="#" class="button" id="sega">Sega</a></div>
+                      <div class="large-6 columns right"><a href="#" class="button" id="nintendo">Nintendo</a></div>
                 </div>
 
                 <div class="row or-question">
                     <p>Ruby <span class="or-keyword">OR</span> JavaScript?</p>
-                      <div class="large-6 columns left"><a href="#" name="language" class="button" value="ruby">Ruby</a></div>
-                      <div class="large-6 columns right"><a href="#" name="language" class="button" value="javascript">JavaScript</a></div>
+                      <div class="large-6 columns left"><a href="#" class="button" id="ruby">Ruby/JavaScript</a></div>
+                      <div class="large-6 columns right"><a href="#" class="button" id="css">CSS</a></div>
                 </div>
 
              </div>
@@ -141,6 +141,18 @@
            <div class="submit-container">
               <input class="form-submit" type="button" value="submit">
            </div>
+
+           <div class="invisible-container">
+              <input type="text" id="question-handed" name="handed">
+              <input type="text" id="question-sport-vid" name="sport_vid">
+              <input type="text" id="question-beer_liq" name="beer_liq">
+              <input type="text" id="question-rep_dem" name="rep_dem">
+              <input type="text" id="question-dirty_rainey" name="dirty_rainey">
+              <input type="text" id="question-sega_nin" name="sega_nin">
+              <input type="text" id="question-ruby_js" name="ruby_js">
+           </div>
+
+
         </form>
       </div>
 

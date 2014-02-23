@@ -46,7 +46,7 @@ class Death
     ["Achieving a high score in the video game BERZERK.","http://en.wikipedia.org/wiki/Berzerk_(video_game)#Berzerk_in_popular_culture"],
     ["Choking on an eye drop bottle cap.","http://en.wikipedia.org/wiki/Tennessee_williams#Death"],
     ["Getting hit in the groin by a tennis ball.","http://en.wikipedia.org/wiki/Dick_Wertheim"],
-    ["Throwing yourself through a window trying to illusrate that the glass is unbreakable.","http://en.wikipedia.org/wiki/Gary_hoy"],
+    ["Throwing yourself through a window trying to illustrate that the glass is unbreakable.","http://en.wikipedia.org/wiki/Gary_hoy"],
     ["Playing StarCraft for fifty hours straight.","http://en.wikipedia.org/wiki/Lee_Seung_Seop#South_Korea"],
     ["Being crushed in your car by a rolling bale of hay.","http://en.wikipedia.org/wiki/Mike_Edwards_(musician)#Death"],
     ["Riding your Segway off of a cliff.","http://en.wikipedia.org/wiki/Jimi_Heselden#Death"]

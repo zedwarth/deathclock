@@ -2,7 +2,7 @@
 
 <div id="background" data--100="background-color: rgb(153,255,255); width:100%; height:200px;"></div>
 
-<div data-0="opacity: 1; width: 100%; position:absolute; text-align: center; top:50px;" data-200="opacity: 0; width: 100%; position:absolute; text-align: center; top:100px;">
+<div data-0="opacity: 1; width: 100%; position:fixed; text-align: center; top:50px;" data-100="opacity: 0; width: 100%; position:absolute; text-align: center; top:100px;">
   <p style="font-family: Acme; font-size: 5em; color:#274563; line-spacing: .1em;">See below!</p>
 </div>
 
@@ -22,32 +22,32 @@
 <% end %>
 -->
 
-<br /><br />
+<!-- <br /><br /> -->
 
 <div class="form-container results">
       <div class="user-response results">
 
       <% if @new_result %>
         <a href='/auth/twitter'>Tweet your results!</a><br /><br />
-        <% if @new_result.death_age > 999 %> <h3> <%= @new_result.name %>, it looks like you are IMMORTAL! </h3> <br />
+        <% if @new_result.death_age > 999 %> <h3 class="cause"> <%= @new_result.name %>, it looks like you are IMMORTAL! </h3> <br />
         <% else %>
           <% death_synonym = Death.get_random_synonym %>
           <% random_cause = Death.get_random_cause %>
           <% death_cause = random_cause[0] %>
           <% death_url = random_cause[1] %>
 
-          <div id="age-of-death">
-            <h1>What's going to happen:</h1>
+          <div>
+            <h1 class="cause">What's going to happen:</h1>
             <br>
             <br>
-            <p> <%= Death.get_random_synonym %><%= @new_result.death_age %>! </p>
+            <p class="result"> <%= Death.get_random_synonym %><%= @new_result.death_age %>! </p>
           </div>
 
-          <div id="cause">
-            <h1>Cause of prolonged sleep:</h1>
+          <div>
+            <h1 class="cause">Cause of prolonged sleep:</h1>
             <br>
             <br>
-            <p> <a href="<%= death_url %>"><%= death_cause %></a> </p>
+            <p class="result"> <a id="result-link" href="<%= death_url %>"><%= death_cause %></a> </p>
           </div>
 
           <div id="consolation">
@@ -67,18 +67,18 @@
         <% end %>
       <% end %>
 
-    <div class="row">
-      <div class="google_chart" id="chart_div" style="width: 900px; height: 500px;"></div>
-    </div>
+    <div class="row chart-container">
+      <div class="google_chart" id="chart_div" style="width: 100%; height: 450px;"></div>
+    <!-- </div> -->
 
-    <div class="row">
-      <div class="google_chart" id="chart_gauge_immortal" style="width: 500px; height :500px;"></div>
+    <!-- <div class="row"> -->
+      <div class="google_chart pie" id="chart_gauge_immortal" style="width: 500px; height :500px;"></div>
     </div>
 
     <% if @new_result %>
-      <a href="/">Go back and try again</a>!
+      <a class="cause try-again" href="/">Go back and try again</a>!
     <% else %>
-      <a href="/">Go back to the main page</a>!
+      <a class="cause" href="/">Go back to the main page</a>!
     <% end %>
 
 

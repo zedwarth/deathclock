@@ -70,25 +70,59 @@ body {
 
 .form-container.results {
   background-color: rgb(153,255,255) !important;
-  padding: 0;
-}
-
-.user-response.results {
+  padding: 5em;
+  margin: 0 auto !important;
   position: relative;
 }
 
+.user-response.results {
+  margin: 0 0 1rem !important;
+  max-width: 45rem !important;
+  margin: auto !important;
+  background-color: rgb(7,50,64) !important;
+  padding: 5em;
+  border-radius: 5em;
+}
+
+.cause {
+  font-family: Lato;
+  font-weight: 700;
+  color: white;
+  font-size: 3em;
+}
+
+.try-again {
+  float: right;
+}
+
+.result-link {
+  text-decoration: none;
+  transistion: all .5s ease;
+}
+
+.result-link:hover {
+  margin-up: .2em;
+}
+
+.result {
+  font-family: Acme;
+  color: white;
+  margin-top: -1em;
+  font-size: 1.5em;
+}
+
 #consolation h3 {
-  font-family: Ruda;
-  font-size: 1em;
+  font-family: Courgette;
+  font-size: 3em;
+  color:white;
+  text-align: center;
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
 }
 
-#chart_div {
-  border-radius: 1em;
-  transition: all .15s ease-in;
-}
-
-#chart_div:hover {
-  margin-top: -10px;
+.google_chart {
+  margin: 0 auto;
+  margin-bottom: 4em;
 }
 
 
@@ -101,9 +135,6 @@ body {
   margin: 0 auto !important;
   position: relative;
 }
-
-
-
 
 #avatar1-form {
   position: absolute;

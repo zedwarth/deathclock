@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="http://cdn.jsdelivr.net/foundation/5.0.3/css/foundation.css" />
   <link rel="stylesheet" href="/stylesheets/normalize.css" />
   <link rel="stylesheet" href="/stylesheets/style.css" />
+
   <meta charset="UTF-8">
 </head>
 
@@ -21,10 +22,19 @@
   <script type="text/javascript" src="/js/skrollr.js"></script>
   <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.0/jquery.mobile.min.js"></script> -->
   <script type="text/javascript" src="https://www.google.com/jsapi"></script>
-  <script type="text/javascript">
+  <!-- <script type="text/javascript">
+    $(document).load(function() {
         google.load('visualization', '1', {packages: ['corechart','gauge']});
-  </script>
-  <script type="text/javascript" src="/js/deathGraph.js"></script>
+        // $('body').append('<script type="text/javascript" src="/js/deathGraph.js"></script>');
+    });
+  </script> -->
+
+
+<script type="text/javascript">
+  google.load('visualization', '1', {packages: ['corechart','gauge']});
+</script>
+<script type="text/javascript" src="/js/deathGraph.js"></script>
+
 
 </body>
 

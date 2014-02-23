@@ -270,45 +270,45 @@ var pieCharts = function() {
 
 // --- IMMORTAL GAUGE CHART BEGIN
 // Create and populate the data table.
-var gaugeChart = function () {
+// var gaugeChart = function () {
 
-	var immortalCount = 0;
-	if (results[0].sega_nin === 'nin') {
-		immortalCount += 20;
-	}
-	if (results[0].rep_dem === 'dem') {
-		immortalCount += 20;
-	}
-	if (results[0].outlook === 'cheerful') {
-		immortalCount += 20;
-	}
-	if (results[0].diet === 'meat') {
-		immortalCount += 20;
-	}
-	if (results[0].location === 'MakerSquare') {
-		immortalCount += 20;
-	}
+// 	var immortalCount = 0;
+// 	if (results[0].sega_nin === 'nin') {
+// 		immortalCount += 20;
+// 	}
+// 	if (results[0].rep_dem === 'dem') {
+// 		immortalCount += 20;
+// 	}
+// 	if (results[0].outlook === 'cheerful') {
+// 		immortalCount += 20;
+// 	}
+// 	if (results[0].diet === 'meat') {
+// 		immortalCount += 20;
+// 	}
+// 	if (results[0].location === 'MakerSquare') {
+// 		immortalCount += 20;
+// 	}
 
-  if (results[0].death_age > 999) {
-  	immortalCount = 100;
-  }
+//   if (results[0].death_age > 999) {
+//   	immortalCount = 100;
+//   }
 
-	var immortalData = google.visualization.arrayToDataTable([
-		['Label', 'Value'],
-		['Immortality', immortalCount]
-	]);
+// 	var immortalData = google.visualization.arrayToDataTable([
+// 		['Label', 'Value'],
+// 		['Immortality', immortalCount]
+// 	]);
 
-	var immortalOptions = {
-		width: 400, height: 400,
-		redFrom: 75, redTo: 80,
-		yellowFrom:80, yellowTo: 90,
-		greenFrom: 90, greenTo: 100,
-		minorTicks: 5, backgroundColor: 'rgb(90,90,90)'
-	};
+// 	var immortalOptions = {
+// 		width: 400, height: 400,
+// 		redFrom: 75, redTo: 80,
+// 		yellowFrom:80, yellowTo: 90,
+// 		greenFrom: 90, greenTo: 100,
+// 		minorTicks: 5
+// 	};
 
-	// Create and draw the visualization.
-	var immortalChart = new google.visualization.Gauge(document.getElementById('chart_gauge_immortal'));
-	immortalChart.draw(immortalData, immortalOptions);
-};
-gaugeChart();
+// 	// Create and draw the visualization.
+// 	var immortalChart = new google.visualization.Gauge(document.getElementById('chart_gauge_immortal'));
+// 	immortalChart.draw(immortalData, immortalOptions);
+// };
+// gaugeChart();
 pieCharts();

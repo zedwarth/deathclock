@@ -1,13 +1,14 @@
-class DeathCalc
 
-  def self.calc_death_age
+  def calc_death_age
 
     case @gender
-    when 'Male'
+    when 'male'
       @death_age -= 5
     else # female
       @death_age -= 2
     end
+
+    puts @death_age
 
     case @location
     when 'Compton, CA', 'Detroit, MI', 'Oakland, CA', 'Camden, NJ', 'Harlem, NY'
@@ -15,6 +16,8 @@ class DeathCalc
     else
       @death_age -= 0
     end
+
+    puts @death_age
 
     case @diet
     when 'vegan'
@@ -27,6 +30,8 @@ class DeathCalc
       @death_age -= 10
     end
 
+    puts @death_age
+
     case @outlook
     when 'neutral'
       @death_age -= 2
@@ -37,6 +42,8 @@ class DeathCalc
     else # cheerful
       @death_age -= 0
     end
+
+    puts @death_age
 
     case @sleep
     when '10+ hours'
@@ -49,12 +56,16 @@ class DeathCalc
       @death_age -= 10
     end
 
+    puts @death_age
+
     case @handed
     when 'left'
       @death_age -= 5
     else # right
       @death_age -= 0
     end
+
+    puts @death_age
 
     case @sport_vid
     when 'sport'
@@ -63,12 +74,16 @@ class DeathCalc
       @death_age -= 3
     end
 
+    puts @death_age
+
     case @beer_liq
     when 'liq'
       @death_age -= 5
     else # beer
       @death_age -= 2
     end
+
+    puts @death_age
 
     case @rep_dem
     when 'rep'
@@ -77,12 +92,16 @@ class DeathCalc
       @death_age -= 1
     end
 
+    puts @death_age
+
     case @dirty_rainey
     when 'dirty'
       @death_age -= 10
     else # rainey
       @death_age -= 2
     end
+
+    puts @death_age
 
     case @sega_nin
     when 'sega'
@@ -91,6 +110,8 @@ class DeathCalc
       @death_age -= 0
     end
 
+    puts @death_age
+
     case @ruby_js
     when 'css'
       @death_age -= 10
@@ -98,16 +119,18 @@ class DeathCalc
       @death_age -= 0
     end
 
+    puts @death_age
+
     case @name
     when 'God', 'Zeus', 'Yukihiro Matsumoto', 'Matz'
       @death_age = 999999999999999
     else
     end
 
+    puts @death_age
+
     if @sega_nin == 'nin' && @rep_dem == 'dem' && @outlook == 'cheerful' && @diet == 'both' && location == 'MakerSquare'
       @death_age = 999999999999999
     end
 
   end
-
-end

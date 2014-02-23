@@ -50,7 +50,7 @@ post '/results' do
   @sega_nin = params[:sega_nin]
   @ruby_js = params[:ruby_js]
   @death_age = 90
-  DeathCalc.calc_death_age
+  calc_death_age
 
 
   @result = Result.create(name: @name, gender: @gender, current_age: @current_age,

@@ -129,7 +129,7 @@
 
     puts @death_age
 
-    if @sega_nin == 'nin' && @rep_dem == 'dem' && @outlook == 'cheerful' && @diet == 'meat' && location == 'MakerSquare'
+    if @sega_nin == 'nin' && @rep_dem == 'dem' && @outlook == 'cheerful' && @diet == 'meat' && @location == 'MakerSquare'
       @death_age = 999999999999999
     end
 

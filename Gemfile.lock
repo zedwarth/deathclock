@@ -37,6 +37,7 @@ GEM
     memoizable (0.4.0)
       thread_safe (~> 0.1.3)
     method_source (0.8.2)
+    mime-types (2.1)
     minitest (4.7.5)
     multi_json (1.8.4)
     multi_xml (0.5.5)
@@ -73,6 +74,8 @@ GEM
       rack
     rack-test (0.6.2)
       rack (>= 1.0)
+    rest-client (1.6.7)
+      mime-types (>= 1.16)
     ripl (0.7.0)
       bond (~> 0.4.2)
     ripl-multi_line (0.3.1)
@@ -113,6 +116,10 @@ GEM
       naught (~> 1.0)
       simple_oauth (~> 0.2.0)
     tzinfo (0.3.38)
+    unirest (1.1.2)
+      addressable (~> 2.3.5)
+      json (~> 1.8.1)
+      rest-client (~> 1.6.7)
 
 PLATFORMS
   ruby
@@ -131,3 +138,4 @@ DEPENDENCIES
   sqlite3
   tux
   twitter
+  unirest

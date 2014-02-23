@@ -9,6 +9,7 @@ gem 'omniauth'
 gem 'omniauth-oauth2'
 gem 'omniauth-twitter'
 gem 'twitter'
+gem 'unirest'
 
 group :development do
   gem 'sqlite3'

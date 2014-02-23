@@ -5,6 +5,7 @@ require 'json'
 require 'omniauth'
 require 'omniauth-twitter'
 require 'twitter'
+require 'unirest'
 
 class Result < ActiveRecord::Base
 end

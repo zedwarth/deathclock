@@ -31,6 +31,8 @@ end
 
 post '/results' do
 
+  load 'lib/death_calc.rb'
+
   @title = "Death Results"
   puts params
   @name = params[:name]
@@ -40,7 +42,16 @@ post '/results' do
   @diet = params[:diet]
   @outlook = params[:outlook]
   @sleep = params[:sleep]
-  @death_age = rand(25..90)
+  @handed = params[:handed]
+  @sport_vid = params[:sport_vid]
+  @beer_liq = params[:beer_liq]
+  @rep_dem = params[:rep_dem]
+  @dirty_rainey = params[:dirty_rainey]
+  @sega_nin = params[:sega_nin]
+  @ruby_js = params[:ruby_js]
+  @death_age = 90
+  DeathCalc.calc_death_age
+
 
   @result = Result.create(name: @name, gender: @gender, current_age: @current_age,
     location: @location, diet: @diet, outlook: @outlook,

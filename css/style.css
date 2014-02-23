@@ -93,28 +93,64 @@ form {
   border-radius: 5em;
 }
 
+.question {
+  font-family: Lato;
+  font-size: 2em;
+  color: white;
+  /*text-shadow: .1em .1em rgb(0,0,0);*/
+}
+
+.question.radio {
+  text-align: center;
+}
+
+/*Regular questions*/
+.question input {
+  margin-top: 1em;
+}
+
+.question-container {
+  margin-top: 3em;
+}
+
+.question-container.first {
+  margin-top: .4em;
+}
+
+.radio-choice {
+  text-align: center;
+  margin-top: 2em;
+  width: 100%;
+}
+
+.radio-choice label {
+  color: white;
+  font-size: 1em;
+}
+
+#sleep label {
+  font-size: .8em;
+}
+
+/*OR questions*/
 .or-question-container {
   margin: 0 auto;
   max-width: 30rem;
-  /*border: 1px solid black;*/
-}
-
-.or-question {
-  /*border: 1px solid black;*/
+  margin-top: 2em;
 }
 
 .or-question p {
   text-align: center;
-  padding-top: 3em;
   clear: both;
+  margin-top: 1em;
 }
 
-.or-question div {
-  float:left;
+span {
+  font-family: Courgette;
+  font-size: 1.5em;
 }
 
 .left {
-  /*border: 1px solid black;*/
   max-width: 10em;
   margin-left: 5em;
 }
@@ -128,6 +164,8 @@ form {
   margin-right: 5em;
 }
 
+
+/*End of form*/
 .submit-container {
   /*border: 1px solid black;*/
   margin-top: 3em;

@@ -1,10 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link href='http://fonts.googleapis.com/css?family=Josefin+Slab:400,700' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Alex+Brush|Courgette' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Acme' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Lato:400,700,900,700italic,900italic|Acme|Alex+Brush|Josefin+Slab:400,600,700,600italic,700italic|Courgette|Ruda|Allan' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/foundation-5.1.1/css/foundation.css" />
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <meta charset="UTF-8">
@@ -59,83 +56,91 @@
           <img id="avatar1-form" src="css/images/avatar1.png">
         <form class="user-response" method="post" action="/response">
               <!-- Describes all open and multiple choice questions -->
-              <div><label for="name">Name:<input type="text" placeholder="Please, enter here" name="name"></label></div>
+              <div class="question-container first"><label for="name" class="question" >Name:<input type="text" placeholder="Please, enter here" name="name"></label></div>
 
-              <div><label for="age">Age:<input type="text" placeholder="Please, enter here" name="age"></label></div>
+              <div class="question-container"><label for="age" class="question">Age:<input type="text" placeholder="Please, enter here" name="age"></label></div>
 
-               <div>
-                <label for="gender">What's your Gender?:</label>
+               <div class="question-container">
+                <label for="gender" class="question radio">What's your Gender?</label>
+                <div class="radio-choice">
                   <input type="radio" name="gender" value="male"><label>Male</label>
                   <input type="radio" name="gender" value="female"><label>Female</label>
+                </div>
               </div>
 
-              <div class=""><label for="location">Location:<input type="text" value="Austin, TX" name="location"></label></div>
+              <div class="question-container"><label for="location" class="question">Location:<input type="text" value="Austin, TX" name="location"></label></div>
 
-              <div>
-                <label for="diet">Diet:</label>
+              <div class="question-container">
+                <label for="diet" class="question radio">Diet</label>
+                <div class="radio-choice">
                   <input type="radio" name="diet" value="vegetarian"><label>Vegetarian</label>
                   <input type="radio" name="diet" value="vegan"><label>Vegan</label>
                   <input type="radio" name="diet" value="meat"><label>Meat</label>
                   <input type="radio" name="diet" value="children"><label>Children</label>
+                </div>
               </div>
 
-              <div>
-                <label for="outlook">What is your Outlook like?:</label>
+              <div class="question-container">
+                <label for="outlook" class="question radio">What's your Outlook like?</label>
+                <div class="radio-choice">
                   <input type="radio" name="outlook" value="positive"><label>Positive</label>
                   <input type="radio" name="outlook" value="neutral"><label>Neutral</label>
                   <input type="radio" name="outlook" value="negative"><label>Negative</label>
-                  <input type="radio" name="outlook" value="fml"><label>Fuck Life</label>
+                  <input type="radio" name="outlook" value="fml"><label>FML</label>
+                </div>
               </div>
 
-              <div>
-                <label for="sleep">How often do you Sleep?:</label>
+              <div class="question-container">
+                <label for="sleep" class="question radio" >How often do you Sleep?</label>
+                <div class="radio-choice" id="sleep">
                   <input type="radio" name="sleep" value="ten"><label>10+ Hours</label>
                   <input type="radio" name="sleep" value="six"><label>6-10 Hours</label>
                   <input type="radio" name="sleep" value="less-six"><label>Less than 6 Hours</label>
                   <input type="radio" name="sleep" value="dead"><label>I'll sleep when I'm dead</label>
+                </div>
               </div>
 
             <!-- Describes all OR questions -->
             <div class="row">
               <div class="or-question-container">
                 <div class="row or-question">
-                    <p>Left-Handed <span class="or-keyword">OR</span> Right-Handed?</p>
+                    <p class="question">Left-Handed <span class="or-keyword">OR</span> Right-Handed?</p>
                       <div class="large-6 columns left"><a href="#" class="button" id="left">Left-Handed</a></div>
                       <div class="large-6 columns right"><a href="#" class="button" id="right">Right-Handed</a></div>
                 </div>
 
                 <div class="row or-question">
-                    <p>Sports <span class="or-keyword">OR</span> Video Games?</p>
+                    <p class="question">Sports <span class="or-keyword">OR</span> Video Games?</p>
                       <div class="large-6 columns left"><a href="#" class="button" id="sports">Sports</a></div>
                       <div class="large-6 columns right"><a href="#" class="button" id="video_games">Video Games</a></div>
                 </div>
 
                 <div class="row or-question">
-                    <p>Beer <span class="or-keyword">OR</span> Liquor</p>
+                    <p class="question">Beer <span class="or-keyword">OR</span> Liquor</p>
                       <div class="large-6 columns left"><a href="#" class="button" id="beer">Beer</a></div>
                       <div class="large-6 columns right"><a href="#" class="button" id="liquor">Liquor</a></div>
                 </div>
 
                 <div class="row or-question">
-                    <p>Republican <span class="or-keyword">OR</span> Democrat?</p>
+                    <p class="question">Republican <span class="or-keyword">OR</span> Democrat?</p>
                       <div class="large-6 columns left"><a href="#" class="button" id="republican">Republican</a></div>
                       <div class="large-6 columns right"><a href="#" class="button" id="democrat">Democrat</a></div>
                 </div>
 
                 <div class="row or-question">
-                    <p>Dirty Sixth <span class="or-keyword">OR</span> Rainey?</p>
+                    <p class="question">Dirty Sixth <span class="or-keyword">OR</span> Rainey?</p>
                       <div class="large-6 columns left"><a href="#" class="button" id="dirty">Dirty Sixth</a></div>
                       <div class="large-6 columns right"><a href="#" class="button" id="rainey">Rainey</a></div>
                 </div>
 
                 <div class="row or-question">
-                    <p>Sega <span class="or-keyword">OR</span> Nintendo?</p>
+                    <p class="question">Sega <span class="or-keyword">OR</span> Nintendo?</p>
                       <div class="large-6 columns left"><a href="#" class="button" id="sega">Sega</a></div>
                       <div class="large-6 columns right"><a href="#" class="button" id="nintendo">Nintendo</a></div>
                 </div>
 
                 <div class="row or-question">
-                    <p>Ruby <span class="or-keyword">OR</span> JavaScript?</p>
+                    <p class="question">Ruby <span class="or-keyword">OR</span> JavaScript?</p>
                       <div class="large-6 columns left"><a href="#" class="button" id="ruby">Ruby/JavaScript</a></div>
                       <div class="large-6 columns right"><a href="#" class="button" id="css">CSS</a></div>
                 </div>

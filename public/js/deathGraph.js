@@ -168,3 +168,63 @@ for ( i = 0; i <= 100; i++ ) {
 
 // Redraw
 chart.draw(data, options);
+
+// Grab data from JSON
+var pieCharts = function() {
+	var gender = [
+		[ 'Gender', 'People' ],
+		[ 'Male',    0],
+		[ 'Female',  0] 
+	];
+
+	for ( var i = 0; i < results.length; i++) {
+		if (results[i].gender === "male") {
+			gender[1][1]++;
+		} else {
+			gender[2][1]++;
+		};
+	};
+
+	var handed = [
+		[ 'Hand', 'People' ],
+		[ 'Left',  0 ],
+		[ 'Right', 0 ]
+	];
+
+	var play = [ 
+		[ 'Activity', 'People' ],
+		[ 'Sports',   0],
+		[ 'Video Games', 0]
+	];
+
+	var alcohol = [
+		[ 'Alcohol', 'People' ],
+		[ 'Beer', 0 ],
+		[ 'Liquor', 0 ]
+	];
+
+	var party = [
+		[ 'Party', 'People' ],
+		[ 'Republican', 0 ],
+		[ 'Democrat', 0]
+	];
+
+	var street [
+		[ 'Street', 'People' ],
+		[ 'Dirty', 0 ],
+		[ 'Rainey', 0 ]
+	];
+
+	var fanboy [
+		[ 'Fanboy/ Fangirl', 'People' ],
+		[ 'Sega', 0 ],
+		[ 'Nintendo', 0 ]
+	];
+
+	var language [
+		[ 'Language', 'People' ],
+		[ 'Ruby/JS', 0 ],
+		[ 'CSS', 0 ]
+	];
+
+

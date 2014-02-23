@@ -10,15 +10,6 @@
 
     puts @death_age
 
-    case @location
-    when 'Compton, CA', 'Detroit, MI', 'Oakland, CA', 'Camden, NJ', 'Harlem, NY'
-      @death_age = @current_age
-    else
-      @death_age -= 0
-    end
-
-    puts @death_age
-
     case @diet
     when 'vegan'
       @death_age -= 8
@@ -116,6 +107,15 @@
     when 'css'
       @death_age -= 10
     else # ruby or js
+      @death_age -= 0
+    end
+
+    puts @death_age
+
+    case @location
+    when 'Compton, CA', 'Detroit, MI', 'Oakland, CA', 'Camden, NJ', 'Harlem, NY'
+      @death_age = @current_age
+    else
       @death_age -= 0
     end
 

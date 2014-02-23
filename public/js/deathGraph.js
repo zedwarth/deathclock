@@ -123,7 +123,7 @@ var chart = new google.visualization.LineChart(document.getElementById('chart_di
 chart.draw(data, options);
 
 var userData = [];
-var k = 20; // death coefficient
+var k = parseInt(results[0].death_age / 90 * 100);// death coefficient
 
 var grabColumn = function ( index ) {
 	limit = lifeArray.length

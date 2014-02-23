@@ -171,21 +171,24 @@ chart.draw(data, options);
 
 // --- IMMORTAL GAUGE CHART BEGIN
 // Create and populate the data table.
-google.load('visualization', '1', {packages:['gauge']});
-var immortalData = google.visualization.arrayToDataTable([
-  ['Label', 'Value'],
-  ['Immortal', 100]
-]);
+var gaugeChart = function () {
+	var immortalData = google.visualization.arrayToDataTable([
+		['Label', 'Value'],
+		['Immortal', 100]
+	]);
 
-var immortalOptions = {
-  width: 400, height: 400,
-  redFrom: 75, redTo: 80,
-  yellowFrom:80, yellowTo: 90,
-  greenFrom: 90, greenTo: 100,
-  minorTicks: 5
+	var immortalOptions = {
+		width: 400, height: 400,
+		redFrom: 75, redTo: 80,
+		yellowFrom:80, yellowTo: 90,
+		greenFrom: 90, greenTo: 100,
+		minorTicks: 5
+	};
+
+	// Create and draw the visualization.
+	var immortalChart = new google.visualization.Gauge(document.getElementById('chart_gauge_immortal'));
+	var immortalChart = new google.visualization.Gauge(document.getElementById('chart_div'));
+	immortalChart.draw(immortalData, immortalOptions);
+	console.log("I run!");
 };
-
-// Create and draw the visualization.
-var immortalChart = new google.visualization.Gauge(document.getElementById('chart_gauge_immortal'));
-immortalChart.draw(immortalData, immortalOptions);
-// --- IMMORTAL GAUGE CHART END
+//gaugeChart();

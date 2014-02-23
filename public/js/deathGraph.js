@@ -173,9 +173,31 @@ chart.draw(data, options);
 // --- IMMORTAL GAUGE CHART BEGIN
 // Create and populate the data table.
 var gaugeChart = function () {
+
+	var immortalCount = 0;
+	if (results[0].sega_nin === 'nin') {
+		immortalCount += 20;
+	}
+	if (results[0].rep_dem === 'dem') {
+		immortalCount += 20;
+	}
+	if (results[0].outlook === 'cheerful') {
+		immortalCount += 20;
+	}
+	if (results[0].diet === 'meat') {
+		immortalCount += 20;
+	}
+	if (results[0].location === 'MakerSquare') {
+		immortalCount += 20;
+	}
+
+  if (results[0].death_age > 999) {
+  	immortalCount = 100;
+  }
+
 	var immortalData = google.visualization.arrayToDataTable([
 		['Label', 'Value'],
-		['Immortal', 100]
+		['Immortality', immortalCount]
 	]);
 
 	var immortalOptions = {
@@ -188,8 +210,7 @@ var gaugeChart = function () {
 
 	// Create and draw the visualization.
 	var immortalChart = new google.visualization.Gauge(document.getElementById('chart_gauge_immortal'));
-	var immortalChart = new google.visualization.Gauge(document.getElementById('chart_div'));
 	immortalChart.draw(immortalData, immortalOptions);
 	console.log("I run!");
 };
-//gaugeChart();
+gaugeChart();

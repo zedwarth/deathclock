@@ -62,16 +62,11 @@ body {
   /*background: none !important;*/
 }
 
-.img-container {
-  text-align: center;
-  padding: 6em;
-}
-
-img {
+.avatar {
   transition: border 0.5s linear;
 }
 
-img:hover {
+.avatar:hover {
   border: 1em solid black;
 }
 

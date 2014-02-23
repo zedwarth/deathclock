@@ -77,11 +77,11 @@ get '/auth/:provider/callback' do
   @results = Result.order("created_at DESC").first
 
   if @results
+    # client_new.update_with_media("I'm gonna die!", File.new("http://imgur.com/75Jr3.jpg"))
     client_new.update("I'm going to die when I'm #{@results.death_age}. http://meetyourmaker.herokuapp.com/ #MKS")
   end
 
 
-  # client_new.update_with_media("I'm gonna die!", File.new("http://cutestuff.co/wp-content/uploads/2012/03/cute_cat_eyes.jpg"))
 
   erb "<h1>#{params[:provider]}</h1>
        <pre>#{JSON.pretty_generate(request.env['omniauth.auth'])}</pre>"

@@ -172,30 +172,30 @@ chart.draw(data, options);
 // Grab data from JSON
 var pieCharts = function() {
 
-	// 
+	//
 	var seedArray = function ( array, object, control ) {
 		for ( var i = 0; i < results.length; i++) {
 			if ( results[i][object] === control ) {
 				array[1][1]++;
 			} else {
 				array[2][1]++;
-			}; 
+			};
 		};
 	};
 
 	var gender = [
 		[ 'Gender', 'People' ],
 		[ 'Male',    0],
-		[ 'Female',  0] 
+		[ 'Female',  0]
 	];
-	
+
 	var handed = [
 		[ 'Hand', 'People' ],
 		[ 'Left',  0 ],
 		[ 'Right', 0 ]
 	];
 
-	var play = [ 
+	var play = [
 		[ 'Activity', 'People' ],
 		[ 'Sports',   0],
 		[ 'Video Games', 0]
@@ -233,15 +233,15 @@ var pieCharts = function() {
 
 	seedArray( gender,   'gender', 'male');
 	seedArray( handed,  'handed', 'left');
-	seedArray( play,     'sport_vid', 'sports');
+	seedArray( play,     'sport_vid', 'sport');
 	seedArray( alcohol,   'beer_liq', 'beer');
 	seedArray( party,    'rep_dem', 'rep');
 	seedArray( street,   'dirty_rainey', 'dirty');
 	seedArray( fanboy,   'sega_nin', 'sega');
-	seedArray( language,   'ruby-js', 'ruby');
+	seedArray( language,   'ruby_js', 'ruby');
 
 	// Google pie graphs
-	
+
 	var genderPie   = new google.visualization.PieChart(document.getElementById('genderPie'));
 	var handedPie   = new google.visualization.PieChart(document.getElementById('handedPie'));
 	var playPie     = new google.visualization.PieChart(document.getElementById('playPie'));

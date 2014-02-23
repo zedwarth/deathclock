@@ -1,5 +1,4 @@
-google.load("visualization", "1", {packages:["corechart"]});
-
+// Initial Chart data
 var data = google.visualization.arrayToDataTable([
 	['Age', 'Male', 'Female'],
 	['0',      0.006990,      0.005728],
@@ -105,12 +104,17 @@ var data = google.visualization.arrayToDataTable([
 	['100',     0.353765,      0.299455]
 ]);
 
+// Chart Options
 var options = {
 	title: 'Death Chart',
 	vAxis: {direction: -1},
-	animation: {duration: 4000}
+//	animation: {duration: 4000}
 };
 
 var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
 
-google.setOnLoadCallback(chart.draw(data, options));
+// Draw Chart 
+chart.draw(data, options);
+
+
+//

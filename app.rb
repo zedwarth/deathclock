@@ -5,7 +5,6 @@ require 'json'
 require 'omniauth'
 require 'omniauth-twitter'
 require 'twitter'
-require 'unirest'
 
 class Result < ActiveRecord::Base
 end
@@ -55,8 +54,10 @@ post '/results' do
 
 
   @result = Result.create(name: @name, gender: @gender, current_age: @current_age,
-    location: @location, diet: @diet, outlook: @outlook,
-    sleep: @sleep, death_age: @death_age)
+    location: @location, diet: @diet, outlook: @outlook, sleep: @sleep,
+    handed: @handed, sport_vid: @sport_vid, beer_liq: @beer_liq,
+    rep_dem: @rep_dem, dirty_rainey: @dirty_rainey, sega_nin: @sega_nin,
+    ruby_js: @ruby_js, death_age: @death_age)
 
   @results = Result.order("created_at DESC")
   @new_result = @results[0]

@@ -7,6 +7,16 @@
     datatype: 'json',
     success: function(data) {
       console.log(JSON.stringify(data));
+      var gender = data.gender;
+      console.log(gender);
+      if (gender === "male") {
+        $('#gender_male').prop('checked',true);
+      }
+      else if (gender === "female") {
+        $('#gender_female').prop('checked',true);
+      }
+      else {
+      }
     },
     error: function(err) { console.log(err); },
     beforeSend: function(xhr) {

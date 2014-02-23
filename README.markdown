@@ -1,15 +1,21 @@
-# Death Clock
+# Meet Your Maker
 ------------
 
-An interactive death clock that graphs your life expectancy base on things that are totally scientific!
+An interactive death clock that graphs your life expectancy based on things that are totally scientific (not really)!
 
 ### Features
 
-* Graphs Update as Input Changes
-* Find Ways to Improve Your Life
-* Laugh
+* Charts your age of death based on your input
+* Provides a random cause of death with link to Wikipedia
+* Live, Laugh, Die
 
-Made by S'nM.
+### Technologies Used
+
+* Backend: Ruby/Sinatra, ActiveRecord
+* Frontend: Foundation CSS, jQuery
+* APIs: Twitter, Google Charts, Genderize
+
+Made by SnM.
 
 * Seth [@zedwarth](https://twitter.com/Zedwarth)
 * Neil [@mithipati](https://twitter.com/mithipati)

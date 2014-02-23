@@ -42,14 +42,14 @@
     <img id="avatar1-form" src="css/images/avatar1.png">
   <form class="user-response" method="post" action="/response">
         <!-- Describes all open and multiple choice questions -->
-        <div><label for="name">Name:<input type="text" placeholder="Please, enter here" name="name"></label></div>
+        <div><label for="name">Name:<input type="text" id="name" placeholder="Please, enter here" name="name"></label></div>
 
         <div><label for="age">Age:<input type="text" placeholder="Please, enter here" name="age"></label></div>
 
          <div>
           <label for="gender">What's your Gender?:</label>
-            <input type="radio" name="gender" value="male"><label>Male</label>
-            <input type="radio" name="gender" value="female"><label>Female</label>
+            <input type="radio" id="gender_male" name="gender" value="male"><label>Male</label>
+            <input type="radio" id="gender_female" name="gender" value="female"><label>Female</label>
         </div>
 
         <div class=""><label for="location">Location:<input type="text" value="Austin, TX" name="location"></label></div>

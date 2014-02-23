@@ -303,7 +303,7 @@ var gaugeChart = function () {
 		redFrom: 75, redTo: 80,
 		yellowFrom:80, yellowTo: 90,
 		greenFrom: 90, greenTo: 100,
-		minorTicks: 5, backgroundColor: 'rgb(90,90,90)'
+		minorTicks: 5
 	};
 
 	// Create and draw the visualization.

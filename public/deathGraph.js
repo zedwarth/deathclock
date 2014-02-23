@@ -1,5 +1,5 @@
-// Initial Chart data
-var data = google.visualization.arrayToDataTable([
+// Initial Chart Data
+var lifeArray =	[
 	['Age', 'Male', 'Female'],
 	['0',      0.006990,      0.005728],
 	['1',      0.000447,      0.000373],
@@ -102,13 +102,17 @@ var data = google.visualization.arrayToDataTable([
 	['98',      0.320876,      0.266514],
 	['99',      0.336919,      0.282504],
 	['100',     0.353765,      0.299455]
-]);
+];
+
+// Make Google DataTable from life Array
+var data = google.visualization.arrayToDataTable(lifeArray);
 
 // Chart Options
 var options = {
 	title: 'Death Chart',
 	vAxis: {direction: -1},
-//	animation: {duration: 4000}
+	animation: {duration: 4000,
+				easing: 'in'}
 };
 
 var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
@@ -116,5 +120,39 @@ var chart = new google.visualization.LineChart(document.getElementById('chart_di
 // Draw Chart 
 chart.draw(data, options);
 
+var userData = [];
+var k = 20; // death coefficient
 
-//
+var grabColumn = function ( index ) {
+	limit = lifeArray.length
+	for ( x = 1; x < limit; x++ ) {
+		userData.push( lifeArray[x][index] );
+	};
+};
+
+var updateUserData = function () {
+	for ( i in userData ) {
+		userData[i] = k * userData[i];
+	}
+};
+
+// Find out the last users sex
+if ( results[0].gender === "male" ) {
+	grabColumn( 1 );
+} else {
+	grabColumn( 2 );
+};
+// Generate new userData with death coefficient
+updateUserData();
+
+// Add last user as new column header
+data.addColumn('number', results[0].name);
+
+// Populate dataTable
+for ( i = 0; i <= 100; i++ ) {
+	console.log(userData[i]);
+	data.setValue(i, 3, userData[i]);
+};
+
+// Redraw
+chart.draw(data, options);

@@ -123,14 +123,14 @@
 
     case @name
     when 'God', 'Zeus', 'Yukihiro Matsumoto', 'Matz'
-      @death_age = 999999999999999
+      @death_age = 9999999
     else
     end
 
     puts @death_age
 
     if @sega_nin == 'nin' && @rep_dem == 'dem' && @outlook == 'cheerful' && @diet == 'meat' && @location == 'MakerSquare'
-      @death_age = 999999999999999
+      @death_age = 9999999
     end
 
   end
